@@ -1,0 +1,83 @@
+* {
+    font-family: 'Hanken Grotesk', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+input {
+    outline: none;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    transition: .3s ease-in-out;
+}
+
+::-webkit-scrollbar {
+    width: 8px
+}
+
+::-webkit-scrollbar-track {
+    background-color: #fff;
+    border-left: 1px solid #fff
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #638645
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #638645
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0 0 15px;
+    color: #111;
+    z-index: 1;
+    position: relative
+}
+
+h1 {
+    font-size: 76px;
+    line-height: 86px;
+    letter-spacing: -.03em;
+}
+
+h2 {
+    font-size: 48px;
+    line-height: 58px;
+    letter-spacing: -.04em
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 34px
+}
+
+h4 {
+    font-size: 20px
+}
+
+p,
+p a {
+    font-size: 18px
+}
+
+.wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 90%;
+}

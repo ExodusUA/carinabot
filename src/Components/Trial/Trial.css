@@ -1,0 +1,46 @@
+.CTABlock {
+    padding: 120px 0;
+    background-color: #1b1b1b;
+}
+
+.CTA_left {
+    text-align: left;
+}
+
+.CTA_center {
+    text-align: center;
+}
+
+.CTABlock h2 {
+    color: white;
+    margin-bottom: 30px;
+}
+
+.CTABlock h4 {
+    margin-bottom: 20px;
+    color: #fff;
+    opacity: .72;
+    line-height: 30px;
+    font-weight: 300;
+}
+
+.CTABlock .wrapper {
+    max-width: 850px;
+}
+
+.Trial {
+    background-color: #1b1b1b;
+    background: url(../../images/Homepage/dark-background-1.webp);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.trialBottomText {
+    color: lightgray;
+    margin-top: 10px;
+}
+
+.trialText {
+    margin-bottom: 40px !important;
+}

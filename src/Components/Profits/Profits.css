@@ -1,0 +1,82 @@
+.profitsControls {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.profitsControls>div {
+    flex: 1;
+}
+
+.currencyBlock {
+    display: block;
+}
+
+.currencyBlock select {
+    width: 100%;
+}
+
+select {
+    padding: 4px 8px;
+    background-image: url("../../images/Homepage/icn-select-arrow.png");
+    background-position: center right 10px;
+    background-size: 16px 16px;
+    border: 1px solid rgba(0, 0, 0, .24);
+    display: block;
+    font-weight: 400;
+    border-radius: 3px;
+    -moz-appearance: none;
+    appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    transition: .3s ease-in-out;
+    outline: 0;
+    font-size: 16px;
+    background-repeat: no-repeat;
+}
+
+.currencyBlock label {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.profitsResult {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.profitsResult p {
+    line-height: 30px;
+}
+
+.profitsResult p:first-child {
+    color: rgb(99, 134, 69);
+    margin: 2px 0;
+    padding: 0;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.profitsResult p:nth-child(2) {
+    color: rgb(99, 134, 69);
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: 600;
+}
+
+.profitsResult p:last-child {
+    color: rgb(99, 134, 69);
+    margin: 2px 0;
+    padding: 0;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+@media (max-width: 490px) {
+    .profitsControls {
+        display: grid;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}

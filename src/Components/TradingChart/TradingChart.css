@@ -1,0 +1,56 @@
+.tradingChartButtons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tradingChartButtons button {
+    padding: 7px 19px;
+    border: 2px solid transparent;
+    z-index: 1;
+    font-weight: 600;
+    letter-spacing: .065em;
+    border-radius: 3px;
+    transition: .3s ease-in-out;
+    outline: 0;
+    line-height: 26px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+.tradingChartsActive {
+    background-color: white !important;
+    color: black !important;
+}
+
+.homepageHow {
+    padding: 160px 0;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url('../../images/Homepage/how_bg.webp');
+}
+
+.howItWorkImage {
+    width: 846px;
+}
+
+.tradingStats p {
+    color: #bbb;
+    font-size: 14px;
+}
+
+.tradingStats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 5px;
+}
+
+.tradingStats b {
+    font-weight: 700;
+}

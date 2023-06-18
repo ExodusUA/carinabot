@@ -1,0 +1,113 @@
+.owner {
+    width: 320px;
+    position: relative;
+}
+
+.ownerContentHover img {
+    width: 100%;
+    position: relative;
+    z-index: 5;
+}
+
+.ownerContentHover {
+    position: relative;
+}
+
+.ownerHidden {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    transition: 0.4s;
+    background: rgba(0, 0, 0, 0.664);
+    opacity: 0;
+}
+
+.ownerImageDecoration {
+    position: absolute;
+    left: -85px;
+    top: -100px;
+    opacity: 0.3;
+}
+
+.ownerRole {
+    font-size: 24px;
+    line-height: 34px;
+    margin-top: 10px;
+    color: #111;
+    z-index: 1;
+    position: relative;
+    font-weight: 600;
+}
+
+.ownerHidden {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.ownerHidden div {
+    text-align: center;
+}
+
+.ownerHidden div p:first-child {
+    font-weight: 700;
+    font-size: 20px;
+    margin: 0 0 15px;
+    color: #111;
+    z-index: 1;
+    position: relative;
+    line-height: 30px;
+    color: white;
+}
+
+.ownerHidden div p:last-child {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 15px;
+    word-break: break-word;
+    color: rgba(255, 255, 255, .9);
+    font-size: 18px;
+    line-height: 30px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.ownerImageDecoration {
+    transition: 0.4s;
+}
+
+.owner:hover .ownerImageDecoration {
+    transform: scale(1.1);
+}
+
+.owner:hover .ownerHidden {
+    opacity: 1;
+}
+
+.ownerHidden>div {
+    transition: 0.4s;
+    transform: translateY(20px);
+}
+
+.owner:hover .ownerHidden>div {
+    transform: translateY(0px);
+}
+
+@media (max-width: 1024px) {
+    .owner {
+        width: 490px;
+        position: relative;
+        margin: 0 auto;
+        margin-bottom: 200px;
+    }
+}
+
+@media (max-width: 490px) {
+    .owner {
+        margin-bottom: 100px;
+    }
+}

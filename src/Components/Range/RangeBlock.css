@@ -1,0 +1,14 @@
+.rangeThumb {
+    background-color: transparent !important;
+    text-align: center;
+    font-weight: 700;
+    color: rgb(99, 134, 69);
+}
+
+.rangeResult {
+    width: 150px;
+    color: rgb(99, 134, 69);
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+}
