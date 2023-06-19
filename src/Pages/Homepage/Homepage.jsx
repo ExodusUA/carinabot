@@ -8,10 +8,12 @@ import security_image from '../../images/Homepage/security.svg'
 import pay_image from '../../images/Homepage/pay.svg'
 import gears_image from '../../images/Homepage/gears.svg'
 import ai_bot_vps from '../../images/Homepage/ai-bot-vps.webp'
-import TradingChart from '../../Components/TradingChart/TradingChart'
 import how_it_works from '../../images/Homepage/how_it_works.webp'
 import CTABlock from '../../Components/CTABlock/CTABlock'
+
+import TradingChart from '../../Components/TradingChart/TradingChart'
 import Profits from '../../Components/Profits/Profits'
+
 import gift_image from '../../images/Homepage/gift.svg'
 import Owner from '../../Components/Owner/Owner'
 import user_1 from '../../images/Homepage/user-1.webp'
@@ -51,6 +53,7 @@ function Homepage() {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+    
 
     return (
         <>
@@ -67,10 +70,10 @@ function Homepage() {
                     <Link className='homepageContainerLink' to='#' onClick={(e) => handleScrollToAnchor(e, '#how-it-works')}>How it works?</Link>
                 </div>
 
-                <div className="scrollDown"></div>
+                <Link to={'#'} onClick={(e) => handleScrollToAnchor(e, '#advantages')}><div className="scrollDown"></div></Link>
             </section>
 
-            <section className='homepageAdvantages'>
+            <section className='homepageAdvantages' id='advantages'>
                 <div className='wrapper'>
                     <h2>Algorithmic trading with artificial intelligence</h2>
 
@@ -120,7 +123,7 @@ function Homepage() {
                             {
                                 lazyLoad ? <TradingChart /> : null
                             }
-                            
+
                         </div>
                     </div>
                 </div>
