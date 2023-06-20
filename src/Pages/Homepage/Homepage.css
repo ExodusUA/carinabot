@@ -1,6 +1,6 @@
 .homepageHeader {
     height: 100vh;
-    background-image: url(../../images/Homepage/header.webp);
+    background-image: url("../../images/Homepage/header.webp");
     width: 100%;
     background-repeat: no-repeat;
     background-position: center;
