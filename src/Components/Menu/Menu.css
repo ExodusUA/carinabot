@@ -206,4 +206,11 @@
     .scroll .headerLinksMobile li a {
         color: white;
     }
+    .scroll .headerButton {
+        color: #fff;
+        border-bottom: 2px solid white;
+    }
+    .headerButton {
+        margin: 0;
+    }
 }

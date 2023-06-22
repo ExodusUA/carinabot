@@ -41,6 +41,9 @@ function ProfitsChart(props) {
             speed: 350,
           },
         },
+        toolbar: {
+          show: false, // Вимкнути кнопку меню
+        },
       },
       plotOptions: {
         bar: {
@@ -51,7 +54,18 @@ function ProfitsChart(props) {
         },
       },
       fill: {
-        colors: ['#638645'],
+        type: 'gradient',
+        colors: ['#638645', '#ff0000'],
+        gradient: {
+          enabled: true,
+          shade: 'dark',
+          type: 'vertical',
+          shadeIntensity: 0.5,
+          inverseColors: false,
+          opacityFrom: 1,
+          opacityTo: 1,
+          stops: [0, 100],
+        }
       },
       dataLabels: {
         enabled: false,
@@ -60,12 +74,12 @@ function ProfitsChart(props) {
         type: 'category',
         categories: data.map((item) => moment(item.month, 'LL').format('MMM, YYYY')),
         labels: {
-            show: false,
+          show: false,
         },
         tooltip: {
-            enabled: true,
+          enabled: true,
         },
-    },
+      },
       yaxis: {
         axisBorder: {
           show: false,

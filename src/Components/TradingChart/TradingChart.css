@@ -21,6 +21,12 @@
     background: transparent;
     color: white;
     border: 1px solid white;
+    display: flex;
+    align-items: center;
+}
+
+.tradingChartButtons img {
+    margin-right: 10px;
 }
 
 .tradingChartsActive {
@@ -53,4 +59,12 @@
 
 .tradingStats b {
     font-weight: 700;
+}
+
+.tradingStats {
+    margin-top: 20px;
+}
+
+.loadingSpinner {
+    width: 30px;
 }

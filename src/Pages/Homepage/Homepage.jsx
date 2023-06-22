@@ -77,7 +77,7 @@ function Homepage() {
                 <div className='wrapper'>
                     <h2>Algorithmic trading with artificial intelligence</h2>
 
-                    <div className="homeAdvantagesContent">
+                    <div className="homeAdvantagesContent"> 
                         <div className="homeAdvantagesItems">
                             <Advantage image={ai_image} text={'left'} title='What is CarinaBot' description={'A software robot that trades for you. CarinaBot analyses markets and automatically trades on your account.'} />
                             <Advantage image={security_image} text={'left'} title='No access to your money' description={"We are not an investment firm, and we don't ask for your money. You have your money on your own account."} />

@@ -5,35 +5,51 @@ import { useState } from 'react'
 import { useEffect } from 'react';
 import axios from 'axios'
 import moment from 'moment/moment.js';
+import loading_black from '../../images/Homepage/loading_black.svg'
 
 
 function TradingChart() {
 
   const [currentData, setCurrentData] = useState([])
-  const [selectedRange, setSelectedRange] = useState(2) //1 - 3 month, 2 - 6 month, 3 - ALL
+  const [selectedRange, setSelectedRange] = useState(1) //1 - 3 month, 2 - 6 month, 3 - ALL
   const [parsedData, setParsedData] = useState([])
+  const [data, setData] = useState([])
+
+  const [loading, setLoading] = useState(null)
 
   useEffect(() => {
     getData()
+  }, [])
+
+  useEffect(() => {
+    if (data.length !== 0) {
+      if (data.find(e => e.range === selectedRange) !== undefined) {
+        console.log(data.find(e => e.range === selectedRange))
+        setCurrentData(data.find(e => e.range === selectedRange).data)
+      } else {
+        getData()
+      }
+    }
   }, [selectedRange])
 
-  function getData() {
+  useEffect(() => {
+    console.log(data)
+  }, [data])
 
+  function getData() {
+    setLoading(selectedRange)
     var from;
     var to;
 
     if (selectedRange === 1) {
-      from = moment().subtract(3, 'months').format('YYYY-MM-DDTHH:mm:ss');
-
-      to = moment().format('YYYY-MM-DDTHH:mm:ss');
+      from = moment().subtract(3, 'months').startOf('month').format('YYYY-MM-DDTHH:mm:ss');
+      to = moment().endOf('month').format('YYYY-MM-DDT23:59:59');
     } else if (selectedRange === 2) {
-      from = moment().subtract(6, 'months').format('YYYY-MM-DDTHH:mm:ss');
-
-      to = moment().format('YYYY-MM-DDTHH:mm:ss');
+      from = moment().subtract(6, 'months').startOf('month').format('YYYY-MM-DDTHH:mm:ss');
+      to = moment().endOf('month').format('YYYY-MM-DDT23:59:59');
     } else {
-      from = moment().subtract(12, 'months').format('YYYY-MM-DDTHH:mm:ss');
-
-      to = moment().format('YYYY-MM-DDTHH:mm:ss');
+      from = moment().subtract(128, 'months').startOf('month').format('YYYY-MM-DDTHH:mm:ss');
+      to = moment().endOf('month').format('YYYY-MM-DDT23:59:59');
     }
 
     let config = {
@@ -44,9 +60,9 @@ function TradingChart() {
 
     axios.request(config)
       .then((response) => {
-        let data = response.data
-        setParsedData(data)
-        var res = data.listOfChartCoordinates
+        let req_data = response.data
+        setParsedData(req_data)
+        var res = req_data.listOfChartCoordinates
 
         var newData = {
           data: [],
@@ -65,7 +81,9 @@ function TradingChart() {
           return item.timestamp
         })
 
+        setData([...data, { range: selectedRange, data: newData }])
         setCurrentData(newData)
+        setLoading(null)
       })
       .catch((error) => {
         console.log(error);
@@ -84,7 +102,10 @@ function TradingChart() {
         height: 350,
         zoom: {
           enabled: false
-        }
+        },
+        toolbar: {
+          show: false, // Вимкнути кнопку меню
+        },
       },
       dataLabels: {
         enabled: false
@@ -97,13 +118,31 @@ function TradingChart() {
       labels: currentData.labels,
       xaxis: {
         type: 'datetime',
+        labels: {
+          style: {
+            colors: '#ffffff' // Колір тексту шкали осі x
+          }
+        },
+        axisBorder: {
+          height: 2,
+        },
         grid: {
           opacity: 0.8 // Змінено на меншу прозорість
+        },
+        axisTicks: {
+          show: false
         }
-
       },
       yaxis: {
         opposite: true,
+        labels: {
+          style: {
+            colors: '#ffffff' // Колір тексту шкали осі y
+          },
+          formatter: function (value) {
+            return "$" + value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+          }
+        },
         grid: {
           opacity: 0.8 // Змінено на меншу прозорість
         }
@@ -126,14 +165,16 @@ function TradingChart() {
     }
   };
 
+
+
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   return (
     <div className='tradingChart'>
       <div className="tradingChartButtons">
-        <button className={selectedRange === 1 ? 'tradingChartsActive' : ''} onClick={e => setSelectedRange(1)}>3 MONTH</button>
-        <button className={selectedRange === 2 ? 'tradingChartsActive' : ''} onClick={e => setSelectedRange(2)}>6 MONTH</button>
-        <button className={selectedRange === 3 ? 'tradingChartsActive' : ''} onClick={e => setSelectedRange(3)}>ALL</button>
+        <button className={selectedRange === 1 ? 'tradingChartsActive' : ''} onClick={e => setSelectedRange(1)}>{loading === 1 ? <img className='loadingSpinner' src={loading_black} alt='Loading' /> : ''} 3 MONTH</button>
+        <button className={selectedRange === 2 ? 'tradingChartsActive' : ''} onClick={e => setSelectedRange(2)}>{loading === 2 ? <img className='loadingSpinner' src={loading_black} alt='Loading' /> : ''} 6 MONTH</button>
+        <button className={selectedRange === 3 ? 'tradingChartsActive' : ''} onClick={e => setSelectedRange(3)}>{loading === 3 ? <img className='loadingSpinner' src={loading_black} alt='Loading' /> : ''} ALL</button>
       </div>
       {
         currentData.length !== 0
