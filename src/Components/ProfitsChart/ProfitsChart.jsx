@@ -59,16 +59,13 @@ function ProfitsChart(props) {
       xaxis: {
         type: 'category',
         categories: data.map((item) => moment(item.month, 'LL').format('MMM, YYYY')),
-        axisBorder: {
-          show: false,
-        },
-        axisTicks: {
-          show: false,
+        labels: {
+            show: false,
         },
         tooltip: {
-          enabled: true,
+            enabled: true,
         },
-      },
+    },
       yaxis: {
         axisBorder: {
           show: false,
@@ -97,10 +94,12 @@ function ProfitsChart(props) {
     return scaledValue.toFixed(2) + suffix + symbol; // Повертаємо форматоване число з суфіксом та значком валюти
   };
 
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
   return (
     <div className='profitsChart'>
       {data.length > 0 ? (
-        <Chart options={config.options} series={config.series} type='bar' height={400} />
+        <Chart options={config.options} series={config.series} type='bar' height={screenWidth > 490 ? 500 : 200} />
       ) : null}
     </div>
   );

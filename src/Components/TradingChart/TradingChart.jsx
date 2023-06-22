@@ -74,7 +74,6 @@ function TradingChart() {
   }
 
   var config = {
-
     series: [{
       name: "USDT",
       data: currentData.data
@@ -87,33 +86,47 @@ function TradingChart() {
           enabled: false
         }
       },
-      fill: {
-        colors: ['#638645']
-      },
       dataLabels: {
         enabled: false
       },
       stroke: {
         curve: 'straight',
-        colors: ['#638645']
+        colors: ['#ffffff'], // Змінено на білий колір
+        width: 1 // Змінено на ширину 1px
       },
-
       labels: currentData.labels,
       xaxis: {
         type: 'datetime',
+        grid: {
+          opacity: 0.8 // Змінено на меншу прозорість
+        }
+
       },
       yaxis: {
-        opposite: true
+        opposite: true,
+        grid: {
+          opacity: 0.8 // Змінено на меншу прозорість
+        }
       },
       legend: {
         horizontalAlign: 'left'
+      },
+      fill: {
+        type: 'gradient',
+        colors: ['#638645'],
+        gradient: {
+          shadeIntensity: 0.5, // Змінено на меншу інтенсивність градієнта
+          opacityFrom: 1,
+          opacityTo: 0
+        }
+      },
+      grid: {
+        borderColor: 'rgba(241, 241, 241, 0.1)'
       }
-    },
+    }
   };
 
-  useEffect(() => {
-    console.log(currentData.data)
-  }, [currentData])
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   return (
     <div className='tradingChart'>
@@ -124,7 +137,7 @@ function TradingChart() {
       </div>
       {
         currentData.length !== 0
-          ? <Chart options={config.options} series={config.series} type="area" height={350} />
+          ? <Chart options={config.options} series={config.series} type="area" height={screenWidth > 490 ? 350 : 250} />
           : null
       }
       {

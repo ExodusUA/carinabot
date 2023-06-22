@@ -53,6 +53,14 @@ function Profits() {
     var data = [];
     var previousProfit = parseFloat(investAmount) || 0;
     var totalProfit = previousProfit;
+    var growthRates = [
+      0,   15,  6.43,  12,  9.90,  10,  2.65,  10,
+      1.44, 10,  4.06,  10,  6.19,  10,  7.33,  10,
+      8.43, 10,  5.98,  10,  4.19,  10,  4.33,  10,
+      4.35, 10,  3.81,  10,  2.62,  10,  4.45,  10,
+      7.12, 12,  5.47,  13
+    ];
+    
 
     for (let i = 0; i < investMounth + 1; i++) {
       const month = moment().add(i, 'months').format('LL');
@@ -61,7 +69,7 @@ function Profits() {
       if (i === 0) {
         profit = previousProfit.toFixed(2);
       } else {
-        profit = (previousProfit * 1.05).toFixed(2);
+        profit = (previousProfit * (1 + growthRates[i % growthRates.length] / 100)).toFixed(2);
       }
 
       data.push({ month, profit });

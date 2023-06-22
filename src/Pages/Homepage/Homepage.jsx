@@ -70,7 +70,7 @@ function Homepage() {
                     <Link className='homepageContainerLink' to='#' onClick={(e) => handleScrollToAnchor(e, '#how-it-works')}>How it works?</Link>
                 </div>
 
-                <Link to={'#'} onClick={(e) => handleScrollToAnchor(e, '#advantages')}><div className="scrollDown"></div></Link>
+                <Link to={'/'} aria-label='scroll down' onClick={(e) => handleScrollToAnchor(e, '#advantages')}><div className="scrollDown"></div></Link>
             </section>
 
             <section className='homepageAdvantages' id='advantages'>
