@@ -22,6 +22,7 @@ function TradingChart() {
   }, [])
 
   useEffect(() => {
+    /*
     if (data.length !== 0) {
       if (data.find(e => e.range === selectedRange) !== undefined) {
         console.log(data.find(e => e.range === selectedRange))
@@ -30,6 +31,10 @@ function TradingChart() {
         getData()
       }
     }
+    */
+
+    getData()
+
   }, [selectedRange])
 
   useEffect(() => {
@@ -172,9 +177,9 @@ function TradingChart() {
   return (
     <div className='tradingChart'>
       <div className="tradingChartButtons">
-        <button className={selectedRange === 1 ? 'tradingChartsActive' : ''} onClick={e => setSelectedRange(1)}>{loading === 1 ? <img className='loadingSpinner' src={loading_black} alt='Loading' /> : ''} 3 MONTH</button>
-        <button className={selectedRange === 2 ? 'tradingChartsActive' : ''} onClick={e => setSelectedRange(2)}>{loading === 2 ? <img className='loadingSpinner' src={loading_black} alt='Loading' /> : ''} 6 MONTH</button>
-        <button className={selectedRange === 3 ? 'tradingChartsActive' : ''} onClick={e => setSelectedRange(3)}>{loading === 3 ? <img className='loadingSpinner' src={loading_black} alt='Loading' /> : ''} ALL</button>
+        <div className={selectedRange === 1 ? 'tradingChartsActive' : ''} onClick={e => setSelectedRange(1)}>{loading === 1 ? <img className='loadingSpinner' src={loading_black} alt='Loading' /> : ''} <p>3 MONTH</p></div>
+        <div className={selectedRange === 2 ? 'tradingChartsActive' : ''} onClick={e => setSelectedRange(2)}>{loading === 2 ? <img className='loadingSpinner' src={loading_black} alt='Loading' /> : ''} <p>6 MONTH</p></div>
+        <div className={selectedRange === 3 ? 'tradingChartsActive' : ''} onClick={e => setSelectedRange(3)}>{loading === 3 ? <img className='loadingSpinner' src={loading_black} alt='Loading' /> : ''} <p>ALL</p></div>
       </div>
       {
         currentData.length !== 0
