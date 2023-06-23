@@ -124,6 +124,7 @@ function TradingChart() {
       xaxis: {
         type: 'datetime',
         labels: {
+          show: false,
           style: {
             colors: '#ffffff' // Колір тексту шкали осі x
           }

@@ -85,7 +85,7 @@ function Homepage() {
                             <Advantage image={gears_image} text={'left'} title='Easy and automated' description={'CarinaBot is suitable for beginners too. Connect it to your account, and it will automatically trade for you.'} />
                         </div>
                         <div className="homeAdvantagesInfo">
-                            <img src={ai_bot_vps} alt="Advantages" />
+                            <img src={ai_bot_vps} alt="Advantages" width={630} height={'100%'} />
                             <Link to={'https://vps.carinabot.com/#/'}><MainButton text='Try Free 3 Months' type='black' /></Link>
                             <p>Results speak for themselves</p>
                         </div>
@@ -134,7 +134,7 @@ function Homepage() {
                     <h2>How It Works?</h2>
                     <h3>Automated AI-Trading Robot</h3>
                     <h4>Using artificial intelligence and triangular-modelling algorithms, CarinaBot predicts future EUR/USD price moves for period of several minutes. When a good opportunity occurs, CarinaBot trades it automatically and earns a profit on your account.</h4>
-                    <img className='howItWorkImage' src={how_it_works} alt="How It Works" />
+                    <img className='howItWorkImage' src={how_it_works} alt="How It Works" width={864} height={'100%'} />
 
                     <div className="homepageHowButtons">
                         <p>* CarinaBot can't make a withdrawal</p>
