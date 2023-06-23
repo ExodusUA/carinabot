@@ -139,7 +139,7 @@ function Homepage() {
                     <div className="homepageHowButtons">
                         <p>* CarinaBot can't make a withdrawal</p>
                         <div>
-                            <Link to={'/how-it-works'}>
+                            <Link to={'/how-it-works'} aria-label='how-it-works'>
                                 <MainButton text={'Learn More'} type='black' />
                             </Link>
                             <Link to={'https://vps.carinabot.com/#/'}>
