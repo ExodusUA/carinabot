@@ -6,7 +6,7 @@ function Owner(props) {
         <div className='owner'>
             <div className="ownerContent">
                 <div className='ownerContentHover'>
-                    <img src={props.image} alt="User" />
+                    <img src={props.image} alt="User" width={320} height={'100%'} />
                     <div className='ownerHidden'>
                         <div>
                             <p>{props.hoverTitle}</p>
