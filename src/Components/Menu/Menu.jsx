@@ -34,7 +34,7 @@ function Menu() {
 
     return (
         <nav className={`headerMenu ${scroll ? 'scroll' : ''}`}>
-            <Link to='/'><img className='headerLogotype' src={scroll ? logo_dark : logo_white} alt="Logotype" /></Link>
+            <Link to='/'><img className='headerLogotype' src={scroll ? logo_dark : logo_white} alt="Logotype" width={169} height={'100%'} /></Link>
 
 
             {

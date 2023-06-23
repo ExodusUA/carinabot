@@ -72,6 +72,12 @@
     height: 20px;
 }
 
+@media (max-width: 840px) {
+    .howItWorkImage {
+        width: 100%;
+    }
+}
+
 @media (max-width: 490px) {
     .tradingChartButtons {
         display: flex;

@@ -299,6 +299,9 @@
     .authorsBlock {
         flex-wrap: wrap;
     }
+    .tradingChart {
+        width: 100%;
+    }
 }
 
 @media (max-width: 490px) {
