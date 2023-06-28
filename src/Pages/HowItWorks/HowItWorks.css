@@ -1,0 +1,44 @@
+.howHeaderCards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.howItWorksCards {
+    padding: 120px 0;
+    background-color: #f8f9fa;
+}
+
+.howHeaderCards .advantageItem {
+    margin: 0 auto;
+}
+
+.infoSectionBlock {
+    padding: 160px 0;
+}
+
+.InfoBlockLight {
+    background-color: #f8f9fa;
+}
+
+@media (max-width: 1170px) {
+    .howHeaderCards .advantageItem {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .howHeaderCards {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .howHeaderCards {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 40px;
+    }
+    .howItWorksCards {
+        padding: 60px 0;
+    }
+}

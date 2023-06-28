@@ -28,9 +28,20 @@
     max-width: 850px;
 }
 
+@media (max-width: 600px) {
+    .CTABlock {
+        padding: 80px 0 !important;
+        background-color: #1b1b1b;
+    }
+}
+
 @media (max-width: 490px) {
     .CTABlock {
         padding: 60px 0 !important;
         background-color: #1b1b1b;
     }
+}
+
+.CTACenter {
+    text-align: center;
 }
