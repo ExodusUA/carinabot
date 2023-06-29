@@ -55,13 +55,13 @@ function Menu() {
                 isMenuOpen
                     ? <div className='mobileMenu'>
                         <ul className='headerLinksMobile'>
-                            <li><Link to='/'>Home</Link></li>
-                            <li><Link to='/how-it-works'>How It Works?</Link></li>
-                            <li><Link to='/pricing'>Pricing</Link></li>
-                            <li><Link to='/download'>Download</Link></li>
-                            <li><Link to='/faq'>F.A.Q</Link></li>
-                            <li><Link to='/contact'>Contact</Link></li>
-                            <li><Link to='/'><button className='headerButton'>START</button></Link></li>
+                            <li><Link onClick={e => setIsMenuOpen(!isMenuOpen)} to='/'>Home</Link></li>
+                            <li><Link onClick={e => setIsMenuOpen(!isMenuOpen)} to='/how-it-works'>How It Works?</Link></li>
+                            <li><Link onClick={e => setIsMenuOpen(!isMenuOpen)} to='/pricing'>Pricing</Link></li>
+                            <li><Link onClick={e => setIsMenuOpen(!isMenuOpen)} to='/download'>Download</Link></li>
+                            <li><Link onClick={e => setIsMenuOpen(!isMenuOpen)} to='/faq'>F.A.Q</Link></li>
+                            <li><Link onClick={e => setIsMenuOpen(!isMenuOpen)} to='/contact'>Contact</Link></li>
+                            <li><Link onClick={e => setIsMenuOpen(!isMenuOpen)} to='/'><button className='headerButton'>START</button></Link></li>
                         </ul>
                     </div>
                     : null

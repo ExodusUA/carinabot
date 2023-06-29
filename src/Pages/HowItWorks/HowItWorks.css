@@ -5,7 +5,7 @@
 
 .howItWorksCards {
     padding: 120px 0;
-    background-color: #f8f9fa;
+    background-color: #f9f9f9;
 }
 
 .howHeaderCards .advantageItem {
@@ -17,7 +17,7 @@
 }
 
 .InfoBlockLight {
-    background-color: #f8f9fa;
+    background-color: #f9f9f9;
 }
 
 @media (max-width: 1170px) {

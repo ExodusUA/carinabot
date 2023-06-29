@@ -31,7 +31,7 @@
     margin-bottom: 15px;
 }
 
-.headerSection h3 {
+.headerSection h2 {
     color: white;
     font-weight: 300;
     color: #bbb;
@@ -55,7 +55,7 @@
         font-size: 54px;
         line-height: 64px;
     }
-    .headerSection h3 {
+    .headerSection h2 {
         font-size: 18px;
     }
 }

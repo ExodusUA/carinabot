@@ -7,7 +7,7 @@ function HeaderSection(props) {
     <section className={`headerSection ${props.backgroundClass}`}>
       <div className="wrapper">
         <h1>How it works?</h1>
-        <h3>How CarinaBot makes profits</h3>
+        <h2>How CarinaBot makes profits</h2>
       </div>
     </section>
   )

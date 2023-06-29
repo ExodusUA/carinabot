@@ -8,7 +8,7 @@ function CTABlock(props) {
         <section className={`CTABlock ${props.type === 'center' ? 'CTACenter' : ''}`}>
             <div className="wrapper">
                 <h2>{props.title}</h2>
-                <h4>{props.description}</h4>
+                <h3>{props.description}</h3>
                 <Link to={props.buttonLink}>
                     <MainButton type={props.buttonType} text={props.buttonText} />
                 </Link>

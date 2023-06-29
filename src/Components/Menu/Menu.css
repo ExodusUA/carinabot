@@ -185,7 +185,7 @@
     }
 }
 
-.headerLinksMobile li {
+.headerLinksMobile a {
     display: block;
     padding: 6px 0;
     position: relative;
@@ -197,7 +197,7 @@
 }
 
 @media (max-width: 768px) {
-    .headerLinksMobile li {
+    .headerLinksMobile a {
         padding: 12px 14px;
         border-bottom: 1px solid rgba(255, 255, 255, .065);
         background: #222;
