@@ -42,7 +42,7 @@ function HowItWorks() {
 
     return (
         <>
-            <HeaderSection backgroundClass={'howItWorksBackground'} />
+            <HeaderSection backgroundClass={'howItWorksBackground'} title={'How it works?'} subtitle={'How CarinaBot makes profits'} />
 
             <section className='howItWorksCards'>
                 <div className="wrapper">
