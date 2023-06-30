@@ -8,8 +8,20 @@ import deal from '../../images/Pricing/deal.svg'
 import { Link } from 'react-router-dom'
 import MainButton from '../../Components/MainButton/MainButton'
 import CTABlock from '../../Components/CTABlock/CTABlock'
+import { useEffect } from 'react'
 
 function Pricing() {
+
+    /* SCROLL TO TOP */
+
+    useEffect(() => {
+        scrollToTop();
+      }, []);
+    
+      const scrollToTop = () => {
+        window.scrollTo(0, 0);
+      };
+
     return (
         <>
             <HeaderSection backgroundClass={'pricingBackground'} title={'Pricing'} subtitle={'It costs you nothing to try'} />

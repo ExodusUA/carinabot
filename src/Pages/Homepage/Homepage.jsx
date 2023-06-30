@@ -53,6 +53,16 @@ function Homepage() {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+
+        /* SCROLL TO TOP */
+
+        useEffect(() => {
+            scrollToTop();
+          }, []);
+        
+          const scrollToTop = () => {
+            window.scrollTo(0, 0);
+          };
     
 
     return (

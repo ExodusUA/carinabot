@@ -9,6 +9,7 @@ import InfoSection from '../../Components/InfoSection/InfoSection'
 import info_1 from '../../images/HowItWorks/info-1.webp'
 import info_2 from '../../images/HowItWorks/info-2.webp'
 import CTABlock from '../../Components/CTABlock/CTABlock'
+import { useEffect } from 'react'
 
 
 
@@ -39,6 +40,16 @@ function HowItWorks() {
             text: 'The closing of the trade is also fully automated. CarinaBot utilizes pre-calculated Take-Profits and Stop-Losses with the highest probability of success.'
         }
     ]
+
+    /* SCROLL TO TOP */
+
+    useEffect(() => {
+        scrollToTop();
+      }, []);
+    
+      const scrollToTop = () => {
+        window.scrollTo(0, 0);
+      };
 
     return (
         <>

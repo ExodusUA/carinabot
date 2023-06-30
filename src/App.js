@@ -8,6 +8,7 @@ import HowItWorks from './Pages/HowItWorks/HowItWorks';
 import Pricing from './Pages/Pricing/Pricing';
 
 function App() {
+
   return (
     <>
       <BrowserRouter basename='/'>
