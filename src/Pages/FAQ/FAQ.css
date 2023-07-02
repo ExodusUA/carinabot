@@ -31,7 +31,7 @@
 }
 
 @media (max-width: 430px) {
-    .faqVisible h4 {
+    .faqVisible p {
         padding-right: 10px;
     }
 }

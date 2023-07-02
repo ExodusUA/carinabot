@@ -77,7 +77,9 @@ function Download() {
             <section className="downloadInfo">
                 <div className="wrapper">
                     <div className="downloadInfoContent">
-                        <img src={aiBotVPS} alt="Bot" width={605} height={'100%'} />
+                        <div className='downloadInfoImage'>
+                            <img src={aiBotVPS} alt="Bot" width={605} height={'100%'} />
+                        </div>
 
                         <div className='downloadInfoText'>
                             <h2>Online VPS</h2>

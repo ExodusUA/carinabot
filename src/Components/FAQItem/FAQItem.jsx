@@ -21,7 +21,7 @@ function FAQItem({ question, answer, type }) {
     return (
         <div className='faqItem' onClick={toggleFAQ}>
             <div className={`faqVisible ${isOpen ? 'open' : ''}`}>
-                <h4>{question}</h4>
+                <p>{question}</p>
                 <div className='arrow' />
             </div>
 
