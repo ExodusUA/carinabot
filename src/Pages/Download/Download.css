@@ -1,0 +1,72 @@
+.downloadSection {
+    background-image: url("../../images/Download/laptop-background.webp");
+}
+
+.downloadInfoContent {
+    display: flex;
+    align-items: center;
+}
+
+.downloadInfoContent img {
+    margin-top: 40px;
+    margin-right: 20px;
+}
+
+.downloadInfo {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.downloadInfoText h3 {
+    color: #555555;
+}
+
+.downloadInfoText>div p {
+    color: #757575;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.downloadInfoText button {
+    margin-top: 20px;
+}
+
+.downloadInfoSection {
+    padding: 100px 0;
+}
+
+.sectionLight {
+    background-color: #f8f9fa;
+}
+
+@media (max-width: 1366px) {
+    .downloadInfoContent img {
+        width: 464px;
+    }
+    .downloadInfoContent {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1024px) {
+    .downloadInfoContent {
+        flex-wrap: wrap;
+    }
+    .downloadInfoContent img {
+        width: 100%;
+    }
+    .downloadInfoContent {
+        justify-content: unset;
+        width: 100%;
+    }
+    .downloadInfoContent>div {
+        width: 100%;
+    }
+}
+
+@media (max-width: 490px) {
+    .downloadInfo {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}

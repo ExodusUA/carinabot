@@ -1,0 +1,65 @@
+.downloadSectionBlock {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.downloadSectionBlock h3 {
+    color: #555555;
+    margin-bottom: 30px;
+}
+
+.downloadSectionBlock img {
+    margin-top: 20px;
+}
+
+.downloadSectionButtons {
+    margin-top: 20px;
+}
+
+.downloadSectionButtons {
+    margin-top: 24px;
+    border-top: 1px solid #111;
+    padding-top: 24px;
+    display: flex;
+    gap: 20px;
+}
+
+.downloadSectionButtons>button {
+    background: transparent !important;
+}
+
+@media (max-width: 1366px) {
+    .downloadSectionBlock img {
+        width: 464px;
+    }
+    .downloadSectionBlock {
+        justify-content: center;
+    }
+    .downloadSectionButtons {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 1024px) {
+    .downloadSectionBlock {
+        flex-wrap: wrap;
+    }
+    .downloadSectionBlock img {
+        width: 100%;
+    }
+    .downloadSectionBlock {
+        justify-content: unset;
+        width: 100%;
+    }
+    .downloadSectionBlock>div {
+        width: 100%;
+    }
+}
+
+@media (max-width: 490px) {
+    .downloadInfoSection {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}

@@ -40,3 +40,8 @@
     border-color: #fff;
     color: #000
 }
+
+.mainButtonBorder {
+    border: 2px solid black;
+    color: black;
+}
