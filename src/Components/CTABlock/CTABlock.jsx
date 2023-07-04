@@ -5,7 +5,7 @@ import MainButton from '../MainButton/MainButton'
 
 function CTABlock(props) {
     return (
-        <section className={`CTABlock ${props.type === 'center' ? 'CTACenter' : ''}`}>
+        <section className={`CTABlock ${props.type === 'center' ? 'CTACenter' : ''} ${props.bg}`}>
             <div className="wrapper">
                 <h2>{props.title}</h2>
                 <h3>{props.description}</h3>

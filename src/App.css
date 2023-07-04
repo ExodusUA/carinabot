@@ -81,3 +81,10 @@ p a {
     margin: 0 auto;
     width: 90%;
 }
+
+.ctaWithBG {
+    background-image: url("images/Contact/dark-background-1.webp");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}

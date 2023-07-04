@@ -8,6 +8,7 @@ import HowItWorks from './Pages/HowItWorks/HowItWorks';
 import Pricing from './Pages/Pricing/Pricing';
 import Download from './Pages/Download/Download';
 import FAQ from './Pages/FAQ/FAQ';
+import Contact from './Pages/Contact/Contact';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
             <Route exact path='/pricing' element={<Pricing />} />
             <Route exact path='/download' element={<Download />} />
             <Route exact path='/faq' element={<FAQ />} />
+            <Route exact path='/contact' element={<Contact />} />
           </Routes>
         </div>
         <Footer />

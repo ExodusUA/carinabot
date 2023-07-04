@@ -1,0 +1,123 @@
+.contactHeader {
+    background: url("../../images/Contact/ai-background.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.contact {
+    padding: 100px 0;
+}
+
+.contact h1 {
+    margin-bottom: 2em;
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: -.04em;
+    text-align: center;
+}
+
+.formRow input,
+.formRow textarea {
+    outline: 0;
+    padding: 10px 18px;
+    border: 1px solid rgba(0, 0, 0, .24);
+    display: block;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 600;
+    color: #111;
+    border-radius: 3px;
+    transition: .3s ease-in-out;
+    width: 100%;
+}
+
+.formRow input:focus,
+.formRow textarea:hover {
+    border-color: rgba(0, 0, 0, .7);
+    box-shadow: 0 0 3px rgb(0 0 0 / 30%);
+    transition: .3s ease-in-out
+}
+
+.formRow label {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.formRow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.messageForm {
+    max-width: 1064px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.formRow>div {
+    width: 49%;
+}
+
+.formRow {
+    margin-bottom: 40px;
+}
+
+.rowTextarea {
+    display: block;
+}
+
+.rowTextarea textarea {
+    height: 300px;
+    resize: none;
+}
+
+.formButton {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+    .formRow {
+        display: block;
+        margin-bottom: 20px;
+    }
+    .formRow>div {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .rowTextarea textarea {
+        height: 200px;
+        resize: none;
+    }
+}
+
+.contactTeam {
+    padding: 100px 0;
+    background-color: #f8f9fa;
+}
+
+.contactTeam h1 {
+    font-size: 48px;
+    line-height: 58px;
+    letter-spacing: -.04em;
+    color: #111;
+    z-index: 1;
+    position: relative;
+    text-align: center;
+}
+
+.contactTeamSubtitle {
+    text-align: center;
+}
+
+.formButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (max-width: 768px) {}
