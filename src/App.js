@@ -9,6 +9,9 @@ import Pricing from './Pages/Pricing/Pricing';
 import Download from './Pages/Download/Download';
 import FAQ from './Pages/FAQ/FAQ';
 import Contact from './Pages/Contact/Contact';
+import Terms from './Pages/Terms/Terms';
+import Privacy from './Pages/Privacy/Privacy';
+import TermsVPS from './Pages/TermsVPS/TermsVPS';
 
 function App() {
 
@@ -24,6 +27,9 @@ function App() {
             <Route exact path='/download' element={<Download />} />
             <Route exact path='/faq' element={<FAQ />} />
             <Route exact path='/contact' element={<Contact />} />
+            <Route exact path='/terms-of-use' element={<Terms />} />
+            <Route exact path='/privacy-and-cookies' element={<Privacy />} />
+            <Route exact path='/terms-of-use-vps' element={<TermsVPS />} />
           </Routes>
         </div>
         <Footer />
