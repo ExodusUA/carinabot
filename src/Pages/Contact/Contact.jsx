@@ -101,7 +101,7 @@ function Contact() {
                             <textarea name="message" id="messageText" placeholder='Enter your message' value={message} onChange={e => setMessage(e.target.value)}></textarea>
                         </div>
 
-                        <div className="formButton">
+                        <div className={`formButton ${status === '' ? 'flex-end' : ''}`}>
                             
                             {
                                 status !== '' 
