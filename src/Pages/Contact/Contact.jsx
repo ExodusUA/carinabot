@@ -102,7 +102,12 @@ function Contact() {
                         </div>
 
                         <div className="formButton">
-                            <p id='contact-form-success-alert'>{status}</p>
+                            
+                            {
+                                status === '' 
+                                ? <p id='contact-form-success-alert'>{status}</p>
+                                : ''
+                            }
                             <button className='mainButton mainDark' onClick={e => sendEmail()}>Submit Message</button>
                         </div>
                     </div>
