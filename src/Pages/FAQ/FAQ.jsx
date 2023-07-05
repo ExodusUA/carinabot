@@ -3,6 +3,7 @@ import './FAQ.css'
 import HeaderSection from '../../Components/HeaderSection/HeaderSection'
 import FAQItem from '../../Components/FAQItem/FAQItem'
 import CTABlock from '../../Components/CTABlock/CTABlock'
+import { useEffect } from 'react'
 
 function FAQ() {
 
@@ -503,6 +504,15 @@ function FAQ() {
         }
     ]
 
+/* SCROLL TO TOP */
+
+useEffect(() => {
+    scrollToTop();
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
 
     return (
         <>

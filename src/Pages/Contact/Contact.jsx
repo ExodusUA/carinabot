@@ -7,6 +7,7 @@ import damien_reaver from '../../images/Contact/damien-reaver.webp'
 import alex_bauer from '../../images/Contact/alex-bauer.webp'
 import CTABlock from '../../Components/CTABlock/CTABlock'
 import { useState } from 'react'
+import { useEffect } from 'react'
 
 
 function Contact() {
@@ -63,6 +64,16 @@ function Contact() {
         }
 
     }
+
+    /* SCROLL TO TOP */
+
+    useEffect(() => {
+        scrollToTop();
+      }, []);
+    
+      const scrollToTop = () => {
+        window.scrollTo(0, 0);
+      };
 
     return (
         <>

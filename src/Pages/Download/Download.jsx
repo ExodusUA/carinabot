@@ -7,6 +7,7 @@ import automated_software from '../../images/Download/automated-software.webp'
 import MainButton from '../../Components/MainButton/MainButton'
 import { Link } from 'react-router-dom'
 import DownloadSection from '../../Components/DownloadSection/DownloadSection'
+import { useEffect } from 'react'
 
 function Download() {
 
@@ -68,6 +69,16 @@ function Download() {
             text: 'Get Torobase Account'
         },
     ]
+
+    /* SCROLL TO TOP */
+
+    useEffect(() => {
+        scrollToTop();
+      }, []);
+    
+      const scrollToTop = () => {
+        window.scrollTo(0, 0);
+      };
 
     return (
         <div>

@@ -1,7 +1,19 @@
 import React from 'react'
 import HeaderSection from '../../Components/HeaderSection/HeaderSection'
+import { useEffect } from 'react'
 
 function Terms() {
+
+/* SCROLL TO TOP */
+
+useEffect(() => {
+    scrollToTop();
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
     return (
         <>
             <div className='headerText'>
