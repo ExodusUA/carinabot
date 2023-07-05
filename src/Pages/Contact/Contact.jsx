@@ -104,7 +104,7 @@ function Contact() {
                         <div className="formButton">
                             
                             {
-                                status === '' 
+                                status !== '' 
                                 ? <p id='contact-form-success-alert'>{status}</p>
                                 : ''
                             }
