@@ -51,7 +51,7 @@ function Contact() {
             })
                 .then((response) => {
                     if (response.status === 200) {
-                        setStatus('Message sent successfully')
+                        setStatus("Message sent! Thank you, we'll reply soon!")
                         setName('')
                         setEmail('')
                         setMessage('')
@@ -102,7 +102,7 @@ function Contact() {
                         </div>
 
                         <div className="formButton">
-                            <p>{status}</p>
+                            <p id='contact-form-success-alert'>{status}</p>
                             <button className='mainButton mainDark' onClick={e => sendEmail()}>Submit Message</button>
                         </div>
                     </div>

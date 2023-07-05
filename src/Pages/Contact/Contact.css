@@ -119,3 +119,28 @@
     align-items: center;
     justify-content: space-between;
 }
+
+#contact-form-success-alert {
+    padding: 10px;
+    background: rgb(137, 226, 2);
+    display: inline;
+    width: 75%;
+}
+
+@media (max-width: 1180px) {
+    #contact-form-success-alert {
+        width: 65%;
+    }
+}
+
+@media (max-width: 768px) {
+    #contact-form-success-alert {
+        width: 100%;
+    }
+    .formButton {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: flex-end;
+    }
+}
