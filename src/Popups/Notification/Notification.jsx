@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Notification.css';
 
-function Notification({setStatus}) {
+function Notification({ setStatus }) {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
@@ -25,13 +25,11 @@ function Notification({setStatus}) {
     return (
         <div className="notifyWrapper">
             <div className={`notification ${isVisible ? 'show' : ''}`}>
-                <div className="close"><p onClick={e => setStatus(false)}>✖</p></div>
-                <div className="icon">
-                    <span role="img" aria-label="checkmark">✅</span>
-                </div>
-
                 <p id='contact-form-success-alert'>Message sent!</p>
                 <p>Thank you, we'll reply soon!</p>
+                <div className="notificationButtonWrapper">
+                    <button onClick={e => setStatus(false)}>OK</button>
+                </div>
             </div>
         </div>
 

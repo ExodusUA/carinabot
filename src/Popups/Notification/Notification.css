@@ -66,3 +66,37 @@
         left: 5vw;
     }
 }
+
+.notification button {
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    z-index: 1;
+    font-weight: 600;
+    letter-spacing: .065em;
+    border-radius: 3px;
+    transition: .3s ease-in-out;
+    outline: 0;
+    line-height: 26px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+    background: #111;
+    border-color: #111;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.notification button:hover {
+    opacity: 0.9;
+}
+
+.notificationButtonWrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.notification {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
