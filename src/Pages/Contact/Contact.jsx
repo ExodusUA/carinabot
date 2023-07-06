@@ -16,7 +16,7 @@ function Contact() {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
-    const [status, setStatus] = useState(false)
+    const [status, setStatus] = useState(true)
 
 
     function sendEmail() {

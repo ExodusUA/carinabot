@@ -59,3 +59,10 @@
 .notification p {
     text-align: center;
 }
+
+@media (max-width: 490px) {
+    .notification {
+        min-width: 90vw;
+        left: 5vw;
+    }
+}
