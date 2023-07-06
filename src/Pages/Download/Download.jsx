@@ -16,7 +16,7 @@ function Download() {
             question: 'Download & Install',
             answer: `<ul>
             <li><a href="https://java.com/en/download/" target="_blank" rel="noreferrer">Download and install Java</a> first </li>
-            <li><a href="download/CarinaBot.jar" target="_blank" rel="noreferrer">Download CarinaBot</a> and start it </li>
+            <li><a href="./CarinaBot.jar" target="_blank" rel="noreferrer">Download CarinaBot</a> and start it </li>
         </ul>`
         },
         {
@@ -43,7 +43,7 @@ function Download() {
             text: '1. Install Java'
         },
         {
-            link: '../../../CarinaBot.jar',
+            link: './CarinaBot.jar',
             text: '2. Then CarinaBot'
         },
     ]
