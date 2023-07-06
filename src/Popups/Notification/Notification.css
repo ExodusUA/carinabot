@@ -1,20 +1,13 @@
 .notification {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
     background-color: #fff;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
+    border-radius: 12px;
     padding: 10px 20px;
-    opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    transform: translateY(100%);
-    z-index: 999;
-}
-
-.notification.show {
-    opacity: 1;
+    transition: transform 0.3s ease;
     transform: translateY(0%);
+    z-index: 999;
+    padding-bottom: 20px;
+    min-width: 400px;
 }
 
 .notification .icon {
@@ -26,4 +19,43 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+.notifyWrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    background: rgba(0, 0, 0, 0.247);
+}
+
+.close {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.icon {
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+#contact-form-success-alert {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+
+.notification p {
+    text-align: center;
 }

@@ -130,7 +130,7 @@ function Contact() {
 
             {
                 status === true
-                    ? <Notification />
+                    ? <Notification setStatus={setStatus} />
                     : null
             }
         </>
