@@ -8,6 +8,7 @@ import alex_bauer from '../../images/Contact/alex-bauer.webp'
 import CTABlock from '../../Components/CTABlock/CTABlock'
 import { useState } from 'react'
 import { useEffect } from 'react'
+import Notification from '../../Popups/Notification/Notification'
 
 
 function Contact() {
@@ -15,7 +16,7 @@ function Contact() {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
-    const [status, setStatus] = useState('')
+    const [status, setStatus] = useState(true)
 
 
     function sendEmail() {
@@ -51,7 +52,8 @@ function Contact() {
             })
                 .then((response) => {
                     if (response.status === 200) {
-                        setStatus("Message sent! Thank you, we'll reply soon!")
+                        setStatus(true)
+
                         setName('')
                         setEmail('')
                         setMessage('')
@@ -69,11 +71,11 @@ function Contact() {
 
     useEffect(() => {
         scrollToTop();
-      }, []);
-    
-      const scrollToTop = () => {
+    }, []);
+
+    const scrollToTop = () => {
         window.scrollTo(0, 0);
-      };
+    };
 
     return (
         <>
@@ -101,13 +103,9 @@ function Contact() {
                             <textarea name="message" id="messageText" placeholder='Enter your message' value={message} onChange={e => setMessage(e.target.value)}></textarea>
                         </div>
 
-                        <div className={`formButton ${status === '' ? 'flex-end' : ''}`}>
-                            
-                            {
-                                status !== '' 
-                                ? <p id='contact-form-success-alert'>{status}</p>
-                                : ''
-                            }
+                        <div className={`formButton flex-end`}>
+
+                        
                             <button className='mainButton mainDark' onClick={e => sendEmail()}>Submit Message</button>
                         </div>
                     </div>
@@ -129,6 +127,12 @@ function Contact() {
             </section>
 
             <CTABlock bg={'ctaWithBG'} title={'Start free trial'} description={'First 3 months for free. See CarinaBot performance and profitability yourself.'} buttonLink={'https://vps.carinabot.com'} buttonText={'Get Started'} buttonType={'dark'} />
+
+            {
+                status === true
+                    ? <Notification />
+                    : null
+            }
         </>
     )
 }
